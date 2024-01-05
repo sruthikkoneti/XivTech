@@ -41,9 +41,9 @@ function App() {
     const handleSubmit = async () => {
         try {
             const body = { cities };
-            const URL=import.meta.env.VITE_HOST_URL
-            console.log(import.meta.env.VITE_HOST_URL)
-            const response = await axios.post<WeatherResponse>(`${URL}getWeather`, body);
+            // const URL=import.meta.env.VITE_HOST_URL
+            // const response = await axios.post<WeatherResponse>(`${URL}getWeather`, body);
+            const response = await axios.post<WeatherResponse>('https://xivtech-backend-iwet.onrender.com/getWeather', body);
             setWeatherData(response.data);
             setCities([])
         } catch (error) {
