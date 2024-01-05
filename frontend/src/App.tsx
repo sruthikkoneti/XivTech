@@ -41,7 +41,7 @@ function App() {
     const handleSubmit = async () => {
         try {
             const body = { cities };
-            const response = await axios.post<WeatherResponse>('http://localhost:5000/getWeather', body);
+            const response = await axios.post<WeatherResponse>('https://xivtech-backend-iwet.onrender.com/getWeather', body);
             setWeatherData(response.data);
             setCities([])
         } catch (error) {
