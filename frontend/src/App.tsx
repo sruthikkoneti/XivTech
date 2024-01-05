@@ -42,6 +42,7 @@ function App() {
         try {
             const body = { cities };
             const URL=import.meta.env.VITE_HOST_URL
+            console.log(import.meta.env.VITE_HOST_URL)
             const response = await axios.post<WeatherResponse>(`${URL}getWeather`, body);
             setWeatherData(response.data);
             setCities([])
